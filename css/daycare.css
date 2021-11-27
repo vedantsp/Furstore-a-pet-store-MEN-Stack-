@@ -1,0 +1,331 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat&family=Poppins:wght@500&display=swap');
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'montserrat',sans-serif;
+}
+
+body{
+    background: #fcf1f1;
+    padding: 0 10px;
+}
+
+.wrapper
+{
+    max-width: 500px;
+    width: 100%;
+    background: #fff;
+    margin: 20px auto;
+    padding: 30px;
+    box-shadow: 1px 1px 2px rgba(0, 0, 0, 0.125);
+}
+
+.wrapper .title
+{
+    font-size: 24px;
+    font-weight: 700;
+    margin-bottom: 25px;
+    color:#fec107;
+    text-transform: uppercase;
+    text-align: center;
+}
+
+.wrapper .form
+{
+   width: 100%; 
+}
+
+.wrapper .form .input_field
+{
+    margin-bottom: 15px;
+    display: flex;
+    align-items: center;
+}
+
+.wrapper .form .input_field label
+{
+ width: 200px;
+ color: #9b9a9a;
+ margin-right: 10px;
+ font-size: 14px;
+}
+
+.wrapper .form .input_field .input,
+.wrapper .form .input_field .textarea
+{
+    width: 100%;
+    outline: none;
+    border: 1px solid #d5dbd9;
+    font-size: 15px;
+    padding: 8px 10px;
+    border-radius: 3px;
+    transition: all 0.3s ease;
+}
+
+.wrapper .form .input_field .textarea
+{
+    resize: none;
+    height: 125px;
+}
+
+.wrapper .form .input_field .custom_select
+{
+    position: relative;
+    width: 100%;
+    height:37px;
+}
+
+.wrapper .form .input_field .custom_select select
+{
+    -webkit-appearance: none;
+    appearance: none;
+    border:  1px solid #e4dfdf;
+    background-color: rgb(236, 232, 232);
+    width: 100%;
+    height: 100%;
+    padding: 8px 10px;
+    border-radius: 3px;
+    outline: none;
+}
+
+.wrapper .form .input_field .custom_select select ::before
+{
+    content: "";
+    position: absolute;
+    top:12px;
+    right: 10px;
+    border: 8px solid;
+    border-color: red transparent transparent transparent;
+}
+
+.wrapper .form .input_field .input:focus, 
+.wrapper .form .input_field .textarea:focus
+{
+    border:1px solid #fec107;
+}
+
+.wrapper .form .input_field p{
+    font-size: 14px;
+    color: #757575;
+}
+
+.wrapper .form .input_field .check
+{
+    width: 15px;
+    height: 15px;
+    position: relative;
+    display: block;
+    cursor:pointer
+}
+
+.wrapper .form .input_field .check input[type="checkbox"]
+{
+    position: absolute;
+    top: 0;
+    left: 0;
+    opacity: 0;
+}
+
+.wrapper .form .input_field .check .checkmark
+{
+    width: 15px;
+    height: 15px;
+    border: 1px solid #fec107;
+    display: block;
+    position: relative;
+
+}
+
+.wrapper .form .input_field .check .checkmark::before
+{
+    content: "";
+    position:absolute;
+    top: 1px;
+    left: 2px;
+    width: 5px;
+    height: 2px;
+    border: 2px solid;
+    border-color: transparent transparent #fff #fff;
+    transform: rotate(-45deg);
+    display: none;
+}
+
+.wrapper .form .input_field .check input[type="checkbox"]:checked ~.checkmark
+{
+    background: #fec107;
+
+}
+
+.wrapper .form .input_field .check input[type="checkbox"]:checked ~.checkmark::before
+{
+    display: block;
+}
+
+a .regis
+{
+    color: #ffffff;
+    font-size: 1.5em;
+    color:#fec107;
+    background: #fff;
+    text-align: center;
+    border-radius: 30px;
+    padding: 9px;
+}
+
+a .regis:hover
+{
+    background-color: #fec107;
+    color: #fff;
+    padding: 9px;
+}
+
+.navigation{
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0px 45px;
+}
+.logo img{
+  height: 120px;
+}
+.menu{
+  display: flex;
+}
+.menu li{
+  position: relative;
+  margin: 20px;
+  display: flex;
+  text-transform: uppercase;
+  font-weight: 500;
+}
+.menu li a{
+  font-size: larger;
+  color: #630606;
+}
+.right-menu a{
+  margin: 0px 10px;
+  font-size: 1.3rem;
+  color: rgba(0,0,0,0.7);
+}
+.menu a:hover,
+.right-menu a:hover,
+.search-cancel:hover,
+.form-cancel:hover{
+  color: #db7f15;
+  transition: all ease 0.3s;
+}
+.sale-lable{
+  width:38px;
+  height: 17px;
+  background-color: #e90f0f;
+  color: #ffffff;
+  font-weight: 400;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 0.7rem;
+  text-transform: uppercase;
+  position: absolute;
+  top: -20px;
+  right: -20px;
+}
+.sale-lable:after{
+  content: '';
+  width:0px;
+  height: 0px;
+  border-bottom: 5px solid transparent;
+  border-left: 3px solid transparent;
+  border-top: 7px solid #f76b6a;
+  border-right: 5px solid transparent;
+  position: absolute;
+  left: 10%;
+  top: 100%;
+}
+.fa-shopping-cart{
+  position: relative;
+}
+.num-cart-product{
+  position: absolute;
+  top: -17px;
+  right: -17px;
+  width:25px;
+  height: 25px;
+  font-size: 0.8rem;
+  border-radius: 50%;
+  background-color: #0d5047;
+  color: #ffffff;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-weight: 400;
+}
+/* Navbar*/
+ 
+.navbar {
+  overflow: hidden;
+  background-color: #333;
+  font-family: Arial;
+}
+
+/* Links inside the navbar */
+.navbar a {
+  float: left;
+  font-size: 16px;
+  color: #630606;
+  text-align: center;
+  padding: 14px 16px;
+  text-decoration: none;
+}
+
+/* The dropdown container */
+.dropdown {
+  float: left;
+  overflow: hidden;
+}
+
+/* Dropdown button */
+.dropdown .dropbtn {
+  font-size: 20px;
+  border: none;
+  outline: none;
+  color: #630606;
+  padding: 14px 16px;
+  background-color: inherit;
+  font-family: inherit; /* Important for vertical align on mobile phones */
+  position: relative;
+  bottom: 14px;
+  display: flex;
+  text-transform: uppercase;
+  font-weight: 500;
+ } /* Important for vertical align on mobile phones */
+
+ .dropdown-content {
+  display: none;
+  position: absolute;
+  background-color: #f9f9f9;
+  min-width: 160px;
+  box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+  z-index: 1;
+}
+
+/* Links inside the dropdown */
+.dropdown-content a {
+  float: none;
+  color: black;
+  padding: 12px 16px;
+  text-decoration: none;
+  display: block;
+  text-align: left;
+}
+
+/* Add a grey background color to dropdown links on hover */
+.dropdown-content a:hover {
+  background-color: #ddd;
+}
+
+/* Show the dropdown menu on hover */
+.dropdown:hover .dropdown-content {
+  display: block;
+}
